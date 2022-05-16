@@ -1,0 +1,17 @@
+@import "../variables/variables.scss";
+@import "../sass2/mixins";
+main{
+    .img-catalogo{
+        width: 250px;
+        height: 400px;
+        margin: 30px;
+        object-fit: cover;
+        border: 3px solid $black;
+        transition: height, width, 2s;
+        &:active{
+            height: 600px;
+            width: 300px;
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "../variables/variables.scss";
+@import "../sass2/mixins";
+
+main{
+    .titulo{
+        @include titulo;}
+    div{
+        .img-carrousel{
+            margin: 10px;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+            justify-content: center;
+            width: 70%;
+            height: 150px;
+        }
+    }
+    article{
+        .grid-index-container{
+            margin: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(2, 370px);
+            gap: 1px;
+            grid-template-areas: 
+            "imagen1-index imagen2-index imagen3-index"
+            "a3-index a1-index a2-index";
+            .imagen1-index{
+                grid-area: imagen1-index;
+                @include imagenes-index;
+            }
+            .imagen2-index{
+                grid-area: imagen2-index;
+                @include imagenes-index;
+            }
+            .imagen3-index{
+                grid-area: imagen3-index;
+                @include imagenes-index;
+            }
+            .a1-index{
+                grid-area: a1-index;
+                margin-top: 60%;
+                @include a-index;
+            }
+            .a2-index{
+                grid-area: a2-index;
+                margin-top: 53%;
+                margin-bottom: 10%;
+                @include a-index;
+            }
+            .a3-index{
+                grid-area: a3-index;
+                margin-top: 49%;
+                margin-bottom: 10%;
+                padding: 0px;
+                @include a-index;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .grid-index-container{
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(2, 45%);
+                grid-template-rows: repeat(4,25%);
+                grid-template-areas: 
+                "imagen1-index imagen2-index"
+                "a3-index a1-index"
+                "imagen3-index none"
+                "a2-index none";
+                .imagen1-index{
+                    grid-area: imagen1-index;
+                    margin-right: 10px;
+                }
+                .imagen2-index{
+                    grid-area: imagen2-index;
+                    
+                }
+                .imagen3-index{
+                    grid-area: imagen3-index;
+                    margin-top: 0%;
+                    align-items: center;
+                }
+                .a3-index{
+                    grid-area: a3-index;
+                    margin-top: 35%;
+                }
+                .a1-index{
+                    grid-area: a1-index;
+                    margin-top: 40%;
+                }
+                .a2-index{
+                    grid-area: a2-index;
+                }
+            }
+        }
+        @media screen and (max-width: 420px){
+            .grid-index-container{
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6,300px);
+                grid-template-areas: 
+                "imagen1-index"
+                "a3-index" 
+                "imagen2-index"
+                "a1-index"
+                "imagen3-index"
+                "a2-index"; 
+                .imagen1-index{
+                    grid-area: imagen1-index;
+                }
+                .imagen2-index{
+                    grid-area: imagen2-index;
+                }
+                .imagen3-index{
+                    grid-area: imagen3-index;
+                }
+                .a3-index{
+                    grid-area: a3-index;
+                    margin-top: 47%;
+                }
+                .a1-index{
+                    grid-area: a1-index;
+                    margin-top: 60%;
+                }
+                .a2-index{
+                    grid-area: a2-index;
+                    margin-top: 48%;
+                }
+            }
+        }
+    }
+}
