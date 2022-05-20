@@ -60,9 +60,7 @@ main div .img-carrousel {
 main article .grid-index-container {
   margin: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(2, 370px);
-  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "imagen1-index imagen2-index imagen3-index" "a3-index a1-index a2-index"; }
   main article .grid-index-container .imagen1-index {
     grid-area: imagen1-index;
@@ -78,7 +76,6 @@ main article .grid-index-container {
     width: 90%; }
   main article .grid-index-container .a1-index {
     grid-area: a1-index;
-    margin-top: 60%;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
@@ -87,8 +84,6 @@ main article .grid-index-container {
       color: red; }
   main article .grid-index-container .a2-index {
     grid-area: a2-index;
-    margin-top: 53%;
-    margin-bottom: 10%;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
@@ -97,8 +92,6 @@ main article .grid-index-container {
       color: red; }
   main article .grid-index-container .a3-index {
     grid-area: a3-index;
-    margin-top: 49%;
-    margin-bottom: 10%;
     padding: 0px;
     font-size: 30px;
     text-align: center;
@@ -111,33 +104,29 @@ main article .grid-index-container {
   main article .grid-index-container {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 45%);
-    grid-template-rows: repeat(4, 25%);
-    grid-template-areas: "imagen1-index imagen2-index" "a3-index a1-index" "imagen3-index none" "a2-index none"; }
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "imagen1-index imagen2-index imagen3-index" "a3-index a1-index a2-index"; }
     main article .grid-index-container .imagen1-index {
-      grid-area: imagen1-index;
-      margin-right: 10px; }
+      grid-area: imagen1-index; }
     main article .grid-index-container .imagen2-index {
       grid-area: imagen2-index; }
     main article .grid-index-container .imagen3-index {
-      grid-area: imagen3-index;
-      margin-top: 0%;
-      align-items: center; }
+      grid-area: imagen3-index; }
     main article .grid-index-container .a3-index {
       grid-area: a3-index;
-      margin-top: 35%; }
+      font-size: 20px; }
     main article .grid-index-container .a1-index {
       grid-area: a1-index;
-      margin-top: 40%; }
+      font-size: 20px; }
     main article .grid-index-container .a2-index {
-      grid-area: a2-index; } }
+      grid-area: a2-index;
+      font-size: 20px; } }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   main article .grid-index-container {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 300px);
     grid-template-areas: "imagen1-index" "a3-index"  "imagen2-index" "a1-index" "imagen3-index" "a2-index"; }
     main article .grid-index-container .imagen1-index {
       grid-area: imagen1-index; }
@@ -147,13 +136,13 @@ main article .grid-index-container {
       grid-area: imagen3-index; }
     main article .grid-index-container .a3-index {
       grid-area: a3-index;
-      margin-top: 47%; }
+      font-size: 25px; }
     main article .grid-index-container .a1-index {
       grid-area: a1-index;
-      margin-top: 60%; }
+      font-size: 25px; }
     main article .grid-index-container .a2-index {
       grid-area: a2-index;
-      margin-top: 48%; } }
+      font-size: 25px; } }
 
 /*colores*/
 /*tipo/tamaño de letra*/
@@ -204,12 +193,12 @@ main article section form .formulario-fieldset {
     padding-left: 10px; }
   main article section form .formulario-fieldset #enviar {
     grid-area: enviar;
-    background-color: #000;
+    background-color: darkgray;
     width: 80px;
     height: 40px;
     border: none;
     border-radius: 30px;
-    color: #fff; }
+    color: #000; }
   main article section form .formulario-fieldset .label-nombre {
     grid-area: label-nombre; }
   main article section form .formulario-fieldset #nombre {
@@ -288,7 +277,8 @@ main article .grid-remeras-container {
     height: 350px;
     margin: 15px;
     border: 2px solid #000;
-    border-radius: 10%; }
+    border-radius: 10%;
+    box-shadow: 15px 15px 15px black; }
   main article .grid-remeras-container .precio1 {
     grid-area: precio1; }
   main article .grid-remeras-container .precio2 {
@@ -313,7 +303,8 @@ main article .grid-remeras-container {
     margin-left: 40%;
     text-decoration: none;
     color: #fff;
-    font-size: 20px; }
+    font-size: 20px;
+    background-color: #000; }
 
 @media screen and (max-width: 1400px) {
   main article .div-remeras1, main article .div-remeras2, main article .div-remeras3, main article .div-remeras4, main article .div-remeras5, main article .div-remeras6, main article .div-remeras7, main article .div-remeras8, main article .div-remeras9, main article .div-remeras10 {
@@ -633,7 +624,8 @@ main article .grid-buzos-container {
     height: 350px;
     margin: 15px;
     border: 2px solid #000;
-    border-radius: 10%; }
+    border-radius: 10%;
+    box-shadow: 15px 15px 15px black; }
   main article .grid-buzos-container .buzos-precio1 {
     grid-area: buzos-precio1; }
   main article .grid-buzos-container .buzos-precio2 {
@@ -658,7 +650,8 @@ main article .grid-buzos-container {
     margin-left: 40%;
     text-decoration: none;
     color: #fff;
-    font-size: 20px; }
+    font-size: 20px;
+    background-color: #000; }
 
 @media screen and (max-width: 1400px) {
   main article .div-buzos1, main article .div-buzos2, main article .div-buzos3, main article .div-buzos4, main article .div-buzos5, main article .div-buzos6, main article .div-buzos7, main article .div-buzos8, main article .div-buzos9, main article .div-buzos10 {

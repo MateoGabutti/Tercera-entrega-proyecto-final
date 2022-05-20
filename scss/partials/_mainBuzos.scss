@@ -9,6 +9,7 @@ main{
             height: 420px;
             margin: 10px;
             margin-bottom: 20px;
+            
         }
         .grid-buzos-container{
             display: grid;
@@ -50,6 +51,7 @@ main{
             }
             .buzos1, .buzos2, .buzos3, .buzos4, .buzos5, .buzos6, .buzos7, .buzos8, .buzos9, .buzos10{
                 @include buzos-del-1-al-10;
+                box-shadow: 15px 15px 15px black;
             }
             .buzos-precio1{
                 grid-area: buzos-precio1;
@@ -82,7 +84,8 @@ main{
                 grid-area: buzos-precio10;
             }
             .buzos-precio1, .buzos-precio2, .buzos-precio3, .buzos-precio4, .buzos-precio5, .buzos-precio6, .buzos-precio7, .buzos-precio8, .buzos-precio9, .buzos-precio10{
-                @include buzos-precio-del-1-al-10
+                @include buzos-precio-del-1-al-10;
+                background-color: $black;
             }
         }
         @media screen and (max-width: 1400px){

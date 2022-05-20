@@ -47,12 +47,12 @@ main{
                     }
                     #enviar{
                         grid-area: enviar;
-                        background-color: $black;
+                        background-color: darkgray;
                         width: 80px;
                         height: 40px;
                         border: none;
                         border-radius: 30px;
-                        color: $white;
+                        color: $black;
                     }
                     .label-nombre{grid-area: label-nombre;}
                     #nombre{grid-area: nombre;}

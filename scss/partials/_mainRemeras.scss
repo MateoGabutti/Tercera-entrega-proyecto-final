@@ -50,6 +50,7 @@ main{
             }
             .remeras1, .remeras2, .remeras3, .remeras4, .remeras5, .remeras6, .remeras7, .remeras8, .remeras9, .remeras10{
                 @include remeras-del-1-al-10;
+                box-shadow: 15px 15px 15px black;
             }
             .precio1{
                 grid-area: precio1;
@@ -83,6 +84,7 @@ main{
             }
             .precio1, .precio2, .precio3, .precio4, .precio5, .precio6, .precio7, .precio8, .precio9, .precio10{
                 @include remeras-precio-del-1-al-10;
+                background-color: $black;
             }
         }
         @media screen and (max-width: 1400px){

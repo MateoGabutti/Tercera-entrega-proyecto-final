@@ -19,9 +19,7 @@ main{
         .grid-index-container{
             margin: 15px;
             display: grid;
-            grid-template-columns: repeat(3, 33%);
-            grid-template-rows: repeat(2, 370px);
-            gap: 1px;
+            grid-template-columns: repeat(3, 1fr);
             grid-template-areas: 
             "imagen1-index imagen2-index imagen3-index"
             "a3-index a1-index a2-index";
@@ -39,37 +37,32 @@ main{
             }
             .a1-index{
                 grid-area: a1-index;
-                margin-top: 60%;
                 @include a-index;
             }
             .a2-index{
                 grid-area: a2-index;
-                margin-top: 53%;
-                margin-bottom: 10%;
                 @include a-index;
             }
             .a3-index{
                 grid-area: a3-index;
-                margin-top: 49%;
-                margin-bottom: 10%;
                 padding: 0px;
                 @include a-index;
             }
+        }
+        @media screen and (max-width: 1400px){
+
         }
         @media screen and (max-width: 768px){
             .grid-index-container{
                 display: grid;
                 width: 100%;
-                grid-template-columns: repeat(2, 45%);
-                grid-template-rows: repeat(4,25%);
+                grid-template-columns: repeat(3, 1fr);
                 grid-template-areas: 
-                "imagen1-index imagen2-index"
-                "a3-index a1-index"
-                "imagen3-index none"
-                "a2-index none";
+                "imagen1-index imagen2-index imagen3-index"
+                "a3-index a1-index a2-index";
+                
                 .imagen1-index{
                     grid-area: imagen1-index;
-                    margin-right: 10px;
                 }
                 .imagen2-index{
                     grid-area: imagen2-index;
@@ -77,28 +70,27 @@ main{
                 }
                 .imagen3-index{
                     grid-area: imagen3-index;
-                    margin-top: 0%;
-                    align-items: center;
+                    
                 }
                 .a3-index{
                     grid-area: a3-index;
-                    margin-top: 35%;
+                    font-size: 20px;
                 }
                 .a1-index{
                     grid-area: a1-index;
-                    margin-top: 40%;
+                    font-size: 20px;
                 }
                 .a2-index{
                     grid-area: a2-index;
+                    font-size: 20px;
                 }
             }
         }
-        @media screen and (max-width: 420px){
+        @media screen and (max-width: 500px){
             .grid-index-container{
                 display: grid;
                 width: 100%;
                 grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(6,300px);
                 grid-template-areas: 
                 "imagen1-index"
                 "a3-index" 
@@ -117,15 +109,15 @@ main{
                 }
                 .a3-index{
                     grid-area: a3-index;
-                    margin-top: 47%;
+                    font-size: 25px;
                 }
                 .a1-index{
                     grid-area: a1-index;
-                    margin-top: 60%;
+                    font-size: 25px;
                 }
                 .a2-index{
                     grid-area: a2-index;
-                    margin-top: 48%;
+                    font-size: 25px;
                 }
             }
         }
